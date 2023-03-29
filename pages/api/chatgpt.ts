@@ -38,3 +38,10 @@ export default async function handler(
     res.status(500).send(error.message);
   }
 }
+if (error !== undefined) {
+  res.status(500).send(error.message);
+} else if (choices?.length > 0) {
+  // ...
+} else {
+  // ...
+}
